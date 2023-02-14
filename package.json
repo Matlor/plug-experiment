@@ -9,6 +9,10 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"@psychedelic/plug-inpage-provider": "^2.5.1",
+		"@walletconnect/browser-utils": "^1.8.0",
+		"browser-buffer": "^0.0.1-1",
+		"buffer": "^6.0.3",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},

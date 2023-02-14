@@ -12,6 +12,7 @@ const timeout = 10000;
 const test = async (setPrin) => {
 	if (!window.ic?.plug) {
 		console.log(isMobile(), "is mobile");
+
 		if (!isMobile()) {
 			window.open("https://plugwallet.ooo/", "_blank");
 			return;
@@ -21,7 +22,6 @@ const test = async (setPrin) => {
 
 		const clientRPC = new WalletConnectRPC({ window, debug });
 		const plugProvider = new Provider(clientRPC);
-
 		const ic = window.ic;
 		window.ic = {
 			...ic,
@@ -49,6 +49,8 @@ const test = async (setPrin) => {
 const App = () => {
 	const [prin, setPrin] = useState("not connected");
 
+	// Is just another attempt with code from here:
+	// It's unclear why the nagivator stuff is needed.
 	const handler = async () => {
 		const debug = false;
 
@@ -84,7 +86,6 @@ const App = () => {
 				"exposeProviderWithWalletConnect" */
 			);
 		}
-
 		const plug = window.ic?.plug;
 	};
 
